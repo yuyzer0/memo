@@ -1,20 +1,21 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# 配列x宣言
-x = np.array([1.0, 2.0, 3.0])
-print(x)
+def step_function(x):
+    return np.array(x>0, dtype = np.int)
 
-# 0~6の0.1刻みで指定
-x = np.arange(0, 6, 0.1)
-# yをsin関数で指定
-y = np.sin(x)
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
 
-# グラフ描画
+def relu(x):
+    return np.maximun(0, x)
+
+x= np.arange(-5.0, 5.0, 0.1)
+y = step_function(x)
+y = sigmoid(x)
+# y = relu(x)
 plt.plot(x, y)
 plt.show()
 
-# グラフ描画
-y = np.cos(x)
-plt.plot(x, y)
-plt.show()
+# print(np.__file__)
+# print(plt.__file__)
