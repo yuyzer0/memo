@@ -1,7 +1,7 @@
 # Study Memo
 
 - Anaconda有効  
-  conda active
+  conda activate
 
 - Visual Studio Code  
      - python利用  
